@@ -7,6 +7,7 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
+	<p id="last-updated"></p>
 	<body class="is-preload">
 
 		<!-- Page Wrapper -->
@@ -263,6 +264,20 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script>
+				// Get the current date and time
+				const currentDate = new Date();
+			  
+				// Format the date and time as a string
+				const formattedDate = `${currentDate.toDateString()} ${currentDate.toLocaleTimeString()}`;
+			  
+				// Find the placeholder element by its ID
+				const lastUpdatedElement = document.getElementById('last-updated');
+			  
+				// Insert the formatted date and time into the placeholder
+				lastUpdatedElement.textContent = `Last Updated: ${formattedDate}`;
+			  </script>
+			  
 
 	</body>
 </html>
